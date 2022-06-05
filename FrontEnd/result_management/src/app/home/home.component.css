@@ -1,0 +1,11 @@
+.site-btn{
+    letter-spacing: 0.35rem;
+    color: #00917c;
+    border-color: #00917c;
+    background-color: transparent;
+}
+.site-btn:hover {
+    background-color: #00917c;
+    color: #f1f2f3;
+    transition: all ease-in 0.3s;
+}
