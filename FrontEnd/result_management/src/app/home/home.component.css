@@ -9,3 +9,8 @@
     color: #f1f2f3;
     transition: all ease-in 0.3s;
 }
+
+.border-bottom-jumbo{
+    border-bottom-right-radius: 15.7rem!important;
+    border-bottom-left-radius: 15.7rem!important;
+}
