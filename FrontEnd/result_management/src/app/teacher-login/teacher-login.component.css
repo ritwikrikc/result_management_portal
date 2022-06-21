@@ -1,0 +1,45 @@
+.card  {
+    width: 50%;
+    border-radius: .5rem;
+}
+
+.card-text {
+    font-size: smaller;
+}
+
+.form-group {
+    margin-top: .75rem;
+    padding: .3rem;
+    font-size: smaller;
+}
+
+.form-control {
+    background-color: #454545;
+    color: #ffff;
+    border: 1px solid #03b89d;
+    transition: all ease-in-out 0.3s;
+}
+
+.form-control:focus {
+    
+}
+
+.btn-sm {
+    width: 20%;
+    padding: .3rem 0 0.3rem 0;
+    border-radius: 0.3rem;
+    transition: all ease-in-out .4s;
+
+}
+
+.auth-sign-up {
+    color: #03b89d;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+
+.auth-sign-up:hover {
+    color: #00917c;
+}
+
+
