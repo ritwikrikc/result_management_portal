@@ -1,0 +1,32 @@
+
+.card  {
+    width: 70%;
+    border-radius: .5rem;
+}
+.form-control {
+    background-color: #454545;
+    color: #ffff;
+    border: 1px solid #03b89d;
+    transition: all ease-in-out 0.3s;
+}
+
+.auth-log-in {
+    color: #03b89d;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+.auth-log-in:hover {
+    color: #00917c;
+}
+.btn-su {
+    width: 30%;
+    padding: .3rem 0 0.3rem 0;
+    border-radius: 0.3rem;
+    transition: all ease-in-out .4s;
+    
+
+}
+/* don't work */
+/* .btn-su :hover {
+   background-color : #0d6e5b !important;
+} */
