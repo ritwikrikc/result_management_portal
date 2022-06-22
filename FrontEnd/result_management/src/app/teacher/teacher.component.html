@@ -8,32 +8,20 @@
         <th scope="col">Total Marks</th>
         <th scope="col">Marks</th>
         <th scope="col">Result</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let student of students">
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>100</td>
-        <td>80</td>
-        <td>pass</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>jone</td>
-        <td>abc@gmail.com</td>
-        <td>100</td>
-        <td>80</td>
-        <td>pass</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry </td>
-        <td>@twitter</td>
-        <td>100 </td>
-        <td>70</td>
-        <td>pass</td>
+        <th scope="row">{{ student.roll_no }}</th>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.total_Marks }}</td>
+        <td>{{ student.marks }}</td>
+        <td>{{ student.result_status }}</td>
+        <td>
+          <a routerLink="/student/{{ student.roll_no }}/profile" class="btn btn-outline-info">More Info</a>
+        </td>
       </tr>
     </tbody>
   </table>
