@@ -8,6 +8,7 @@ import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TeacherComponent } from './teacher/teacher.component';
+import { StudentProfileComponent } from './student-profile/student-profile.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TeacherComponent } from './teacher/teacher.component';
     HomeComponent,
     TeacherLoginComponent,
     SignUpComponent,
-    TeacherComponent
+    TeacherComponent,
+    StudentProfileComponent,
   ],
   imports: [
     BrowserModule,
