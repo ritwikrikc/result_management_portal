@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "\"this express js backend for result management portal\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ritwikchowdhury",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
