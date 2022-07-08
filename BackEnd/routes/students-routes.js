@@ -30,7 +30,6 @@ router.get("/list", async (req, res) => {
 
 
 // fetch sprecific result
-
 router.get("/:roll_no/result", async (req, res) => {
     try{
         
@@ -38,7 +37,15 @@ router.get("/:roll_no/result", async (req, res) => {
 
         if ( student == null) throw new Error("Bad request! Invalid roll number !");
 
-        return res.status(200).send(JSON.stringify(student));
+        const studentResult = {
+            "roll_no": student.roll_no,
+            "name": student.name,
+            "marks": student.marks,
+            "total_marks": student.total_marks,
+            "status": student.result_status
+        };
+
+        return res.status(200).send(JSON.stringify(studentResult));
 
     } catch (err) {
         console.log("error");
