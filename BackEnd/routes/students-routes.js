@@ -127,6 +127,21 @@ router.patch("/:roll_no/update", async (req, res) => {
 });
 
 
+// delete student
+router.delete("/:roll_no/delete", async (req, res) => {
+    try {
+        const student = await STUDENTS.findOne({ roll_no: req.params.roll_no });
+        const student_delete = await STUDENTS.deleteOne({ roll_no: req.params.roll_no });
+        console.log(`------------------ student deleted: ${student} ------------------`);
+        return res.status(200).send(JSON.stringify(student_delete));
+    } catch (err) {
+        return res.status(404).send(JSON.stringify({
+            "error message": `${err}`
+        }));
+    }
+});
+
+
 
 
 module.exports = router;
