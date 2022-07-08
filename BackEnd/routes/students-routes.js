@@ -101,6 +101,30 @@ router.post("/add", async (req, res) => {
 });
 
 
+// update specific student result
+router.patch("/:roll_no/update", async (req, res) => {
+
+    try { 
+        const student = await STUDENTS.updateOne(
+            { roll_no: req.params.roll_no },
+            {
+                $set: {
+                    name: req.body.name,
+                    total_marks: req.body.total_marks,
+                    marks: req.body.marks,
+                    result_status: req.body.result_status,
+                }
+            }
+        );
+        return res.status(200).send(JSON.stringify(student));
+    } catch (err) {
+        return res.status(404).send(JSON.stringify({
+            "error message": `${err}`
+        }));
+    }
+    
+
+});
 
 
 
