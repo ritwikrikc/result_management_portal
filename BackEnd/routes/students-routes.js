@@ -51,6 +51,26 @@ router.get("/:roll_no/result", async (req, res) => {
 });
 
 
+//get specific student by roll no
+router.get("/:roll_no/detail", async (req, res) => {
+    try{
+        
+        const student = await STUDENTS.findOne({ roll_no: req.params.roll_no });
+
+        if ( student == null) throw new Error("Bad request! Invalid roll number !");
+
+        return res.status(200).send(JSON.stringify(student));
+
+    } catch (err) {
+        console.log("error");
+        return res.status(404).send(
+            JSON.stringify({
+                "error message": `${err}`
+            })
+        );
+    }
+});
+
 // add new student
 router.post("/add", async (req, res) => {
     const student = new STUDENTS({
@@ -72,6 +92,9 @@ router.post("/add", async (req, res) => {
     };
 
 });
+
+
+
 
 
 
