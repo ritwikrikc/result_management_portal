@@ -51,6 +51,28 @@ router.get("/:roll_no/result", async (req, res) => {
 });
 
 
+// add new student
+router.post("/add", async (req, res) => {
+    const student = new STUDENTS({
+        roll_no: Number(req.body.roll_no),
+        name: req.body.name,
+        email: req.body.email,
+        total_marks: Number(req.body.total_marks),
+        marks: Number(req.body.marks),
+        result_status: req.body.result_status
+    });
+
+    try{
+        const save_student = await student.save();  
+        return res.status(200).send(JSON.stringify(save_student));
+    } catch (err) {
+        return res.status(404).send(JSON.stringify({
+            "error message": `${err}`
+        }));
+    };
+
+});
+
 
 
 module.exports = router;
