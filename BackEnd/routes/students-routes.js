@@ -3,6 +3,9 @@ const { json } = require("express");
 const express = require("express");
 const { model } = require("../db-connection");
 
+// import student login validation
+const { studentLoginValidation } = require("../validation");
+
 // model import
 const STUDENTS = require("../models/student");
 
@@ -141,7 +144,40 @@ router.delete("/:roll_no/delete", async (req, res) => {
     }
 });
 
+//  student login
+router.post("/login", async (req, res) => {
+    // VALIDATE REQUEST DATA
+    const { error } = studentLoginValidation(req.body);
+    
+    if (error)
+      return res.status(400).send(JSON.stringify(error.details[0].message));
+  
+    // checking Roll no existence
+    const student = await STUDENTS.findOne({ roll_no: req.body.roll_no });
+    if (!student) {
+      return res
+        .status(400)
+        .send(JSON.stringify({ message: "Student not exists !" }));
+    }
+  
+    // CHECK VALID PASSWORD
+    const validStudent = student.email === req.body.email;
+    if (!validStudent)
+      return res
+        .status(403)
+        .send(JSON.stringify({ message: "Invalid email id !" }));
+  
+    const studentResult = {
+        "roll_no": student.roll_no,
+        "name": student.name,
+        "marks": student.marks,
+        "total_marks": student.total_marks,
+        "status": student.result_status
+    };
 
+    return res.status(200).send(JSON.stringify(studentResult));
+  });
+  
 
 
 module.exports = router;
