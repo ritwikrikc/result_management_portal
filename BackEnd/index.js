@@ -15,11 +15,12 @@ const app = express();
 
 // import routes
 const studentRoutes = require("./routes/students-routes");
+const teacherRoutes =  require("./routes/teachers-routes");
 
 // middleware
 app.use(bodyParser.json());
 app.use("/api/student", studentRoutes);
-
+app.use("/api/teacher", teacherRoutes);
 
 // routes
 app.get("/", (req, res) => {
