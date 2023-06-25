@@ -18,6 +18,8 @@ const studentRoutes = require("./routes/students-routes");
 const teacherRoutes =  require("./routes/teachers-routes");
 
 // middleware
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:4200" }));
 app.use(bodyParser.json());
 app.use("/api/student", studentRoutes);
 app.use("/api/teacher", teacherRoutes);
