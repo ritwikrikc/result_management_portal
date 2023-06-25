@@ -1,3 +1,11 @@
+<nav *ngIf="isTeacherLogin" class="navbar navbar-dark bg-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand">{{ username }}</a>
+    <div class="d-flex">
+      <button class="btn btn-outline-danger" (click)="logoutTeacher()">Logout</button>
+    </div>
+  </div>
+</nav>
 <section class="mx-5 student_table">
   <table class="table table-bordered table-dark mt-5">
     <thead>

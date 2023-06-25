@@ -50,6 +50,10 @@ export class TeacherLoginComponent implements OnInit {
             'AUTH_TOKEN',
             JSON.parse(JSON.stringify(res))['token']
           );
+          localStorage.setItem(
+            'username',
+            this.emailFormControl?.value
+          );
           this.router.navigate([this.redirectToTeacherDashboard]);
         },
         error: (e) => {

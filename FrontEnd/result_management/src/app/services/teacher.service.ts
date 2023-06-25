@@ -28,10 +28,23 @@ export class TeacherService {
     )
   }
 
+  // Logout method
+  logout(): void{
+    localStorage.removeItem('AUTH_TOKEN');
+    localStorage.removeItem('username');
+  }
+
   // register method
 
-  // method to get the status of teacher loged.
+  // method to get the status of teacher logged.
   get isLoggedIn(): boolean{
     return !!localStorage.getItem('AUTH_TOKEN');
   }
+  
+  // method to get the email of teacher logged.
+  get getLoggedInUsername(): string{
+    return localStorage.getItem('username')!;
+  }
+
+
 }
