@@ -1,26 +1,26 @@
-.site-btn{
-    letter-spacing: 0.35rem;
-    color:  #00917c;
-    border-color: #00917c;
-    background-color: transparent;
+.site-btn {
+  letter-spacing: 0.35rem;
+  color: #00917c;
+  border-color: #00917c;
+  background-color: transparent;
 }
 
 .site-btn:hover {
-    background-color: #00917c;
-    color: #f1f2f3;
-    transition: all ease-in 0.3s;
+  background-color: #00917c;
+  color: #f1f2f3;
+  transition: all ease-in 0.3s;
 }
 
-.border-bottom-jumbo{
-    border-bottom-right-radius: 15.7rem!important;
-    border-bottom-left-radius: 15.7rem!important;
+.border-bottom-jumbo {
+  border-bottom-right-radius: 15.7rem !important;
+  border-bottom-left-radius: 15.7rem !important;
 }
 
 /* section..... */
 .card {
-    width: 45%;
-    margin: 4rem;
-    color:#03b89d ;    
+  width: 45%;
+  margin: 4rem;
+  color: #03b89d;
 }
 
 /* .flex-container {
@@ -28,42 +28,46 @@
     justify-content: center;
 } */
 
-
 /* Site Button Background Color */
 
-.card_btn{
-    color:  #00917c;
-    border-color: #00917c;
-    background-color: transparent;
+.card_btn {
+  color: #00917c;
+  border-color: #00917c;
+  background-color: transparent;
 }
 
 .card_btn:hover {
-    background-color: #00917c;
-    color: #f1f2f3;
-    transition: all ease-in 0.3s;
+  background-color: #00917c;
+  color: #f1f2f3;
+  transition: all ease-in 0.3s;
 }
 
 /* Ends Here */
 
 /* Grid Card */
 .grid_card {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
 }
 /* Ends Here */
 
 /* Card Image Size */
 .img_size {
-    height: 16rem;
-    object-fit: cover;
+  height: 16rem;
+  object-fit: cover;
 }
 /* Ends Here */
 
 /* Small Size Screen Card Margin bottom */
 @media screen and (min-width: 480px) {
-    .site_card {
-        margin-bottom: 0px;
-    }
+  .site_card {
+    margin-bottom: 0px;
+  }
 }
 /* Ends Here */
+
+.lead {
+  color: #00917c;
+  font-family: Papyrus;
+}
