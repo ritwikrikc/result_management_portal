@@ -1,0 +1,58 @@
+<section class="mx-5 mt-5 student_table">
+  <form class="conatiner mx-auto card bg-dark">
+    <h2 class="card-title text-center">Add Student Details</h2>
+    <hr />
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="student_name">Name</label>
+          <input [formControl]="student_name" type="text" class="form-control" id="student_name" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="roll_number">Roll Number</label>
+          <input [formControl]="roll_number" type="text" class="form-control" id="roll_number" />
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input [formControl]="emailFormControl" type="email" class="form-control" id="email" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="total_marks">Total Marks</label>
+          <input [formControl]="total_marks" type="text" class="form-control" id="total_marks" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="marks">Marks</label>
+          <input [formControl]="marks" type="text" class="form-control" id="marks" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="result_status">Result Status</label>
+          <input [formControl]="result_status" type="text" class="form-control" id="result_status" />
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="mt-3 text-center">
+    <a routerLink="/teacher/dashboard" type="button" class="btn btn-danger btn-sm mx-2">Cancel</a>
+    <!-- <button type="submit" (click)="addStudent()" [disabled]="!isAddStudentFormValid()" class="btn btn-outline-info btn-sm mx-2 add-student-btn">Save</button> -->
+    <button type="submit" (click)="addStudent()" class="btn btn-outline-info btn-sm mx-2 add-student-btn">Save</button>
+  </div>
+</section>

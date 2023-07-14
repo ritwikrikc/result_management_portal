@@ -2,10 +2,12 @@
   <div class="container-fluid">
     <a class="navbar-brand">{{ username }}</a>
     <div class="d-flex">
-      <button class="btn btn-outline-danger" (click)="logoutTeacher()">Logout</button>
+      <button class="btn btn-success mx-2" routerLink="/teacher/add-edit-student">Add student</button>
+      <button class="btn btn-outline-danger mx-2"  (click)="logoutTeacher()">Logout</button>
     </div>
   </div>
 </nav>
+
 <section class="mx-5 student_table">
   <table class="table table-bordered table-dark mt-5">
     <thead>
@@ -21,14 +23,14 @@
     </thead>
     <tbody *ngFor="let student of students">
       <tr>
-        <th scope="row">{{ student.roll_no }}</th>
-        <td>{{ student.name }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.total_Marks }}</td>
-        <td>{{ student.marks }}</td>
-        <td>{{ student.result_status }}</td>
+        <th scope="row">{{ student?.roll_no }}</th>
+        <td>{{ student?.name }}</td>
+        <td>{{ student?.email }}</td>
+        <td>{{ student?.total_marks }}</td>
+        <td>{{ student?.marks }}</td>
+        <td>{{ student?.result_status }}</td>
         <td>
-          <a routerLink="/student/{{ student.roll_no }}/profile" class="btn btn-outline-info">More Info</a>
+          <a routerLink="/student/{{ student?.roll_no }}/profile" class="btn btn-outline-info">More Info</a>
         </td>
       </tr>
     </tbody>

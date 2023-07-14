@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { STUDENTS } from '../mock-student';
 import { Student } from '../student';
 import { StudentService } from '../services/student.service';
 import { TeacherService } from '../services/teacher.service';
@@ -31,6 +30,7 @@ export class TeacherComponent implements OnInit {
 
   getStudents(): void{
     this.studentService.getStudents().subscribe(students => this.students = students);
+    
   }
 
   logoutTeacher(): void {
@@ -38,4 +38,5 @@ export class TeacherComponent implements OnInit {
     alert("Logout Successfull");
     this.router.navigate([this.redirectToTeacherLogin]);
   }
+
 }

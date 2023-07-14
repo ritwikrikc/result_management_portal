@@ -1,8 +1,11 @@
+
 export interface Student {
-    roll_no: number;
+    _id?: string;
+    __v?: number;
+    roll_no: string;
     name: string;
     email: string;
-    total_Marks: number;
-    marks: number;
+    total_marks: string;
+    marks: string;
     result_status: string;
 }

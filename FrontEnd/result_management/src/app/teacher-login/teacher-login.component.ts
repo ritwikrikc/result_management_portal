@@ -26,6 +26,8 @@ export class TeacherLoginComponent implements OnInit {
     if(this.teacherService.isLoggedIn){
       this.router.navigate([this.redirectToTeacherDashboard]);
     }
+
+    // Todo: show student data on a sorted order by roll no
   }
 
   /**

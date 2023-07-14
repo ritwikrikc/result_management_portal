@@ -24,7 +24,7 @@ export class StudentProfileComponent implements OnInit {
   }
 
   getStudent(): void{
-    const roll_no = Number(this.route.snapshot.paramMap.get('roll_no'));
+    const roll_no = this.route.snapshot.paramMap.get('roll_no') ? this.route.snapshot.paramMap.get('roll_no')! : '' ;
     this.studentService.getStudent(roll_no).subscribe(student => this.student = student)
   }
 

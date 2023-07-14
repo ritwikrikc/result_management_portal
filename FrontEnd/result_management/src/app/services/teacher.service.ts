@@ -22,7 +22,7 @@ export class TeacherService {
   login(formData: any) {
     const teacherLoginUrl: string = `${this.REST_API_HOST}/api/teacher/login`;
     const body = formData;
-    return this.httpClient.post('http://localhost:8000/api/teacher/login', body, {
+    return this.httpClient.post(teacherLoginUrl, body, {
         headers: this.httpHeader
       }
     )
